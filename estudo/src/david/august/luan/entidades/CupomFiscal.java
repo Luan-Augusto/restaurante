@@ -1,15 +1,20 @@
 package david.august.luan.entidades;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 public class CupomFiscal {
     private Cliente cliente;
     private Funcionario funcionario;
     private Random codigo;
+    private Calendar dataCompra;
 
     public CupomFiscal(Cliente cliente, Funcionario funcionario) {
         this.cliente = cliente;
         this.codigo = new Random();
+        this.dataCompra = Calendar.getInstance();
+
     }
 
     // gerar um cod capaz de pegar 10 numeros aleatorios
@@ -23,6 +28,7 @@ public class CupomFiscal {
         return cod;// retorno
     }
 
+    // GETTER'S / SETTER'S
     public Cliente getCliente() {
         return cliente;
     }
@@ -37,5 +43,17 @@ public class CupomFiscal {
 
     public void setCodigo(Random codigo) {
         this.codigo = codigo;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    public Calendar getDataCompra() {
+        return dataCompra;
     }
 }
