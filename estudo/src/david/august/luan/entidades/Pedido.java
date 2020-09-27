@@ -4,14 +4,14 @@ import java.util.*;
 
 public class Pedido {
     private Random codigo;
-    private String comida;
+    private String refeicao;
     private String bebida;
     private double preco;
     private Date dataPedido;
 
-    public Pedido(String comida, String bebida, double preco) {
+    public Pedido(String refeicao, String bebida, double preco) {
         this.codigo = new Random();
-        this.comida = comida;
+        this.refeicao = refeicao;
         this.bebida = bebida;
         this.preco = preco;
         this.dataPedido = new Date();
@@ -28,12 +28,12 @@ public class Pedido {
         return cod;// retorno
     }
 
-    public String getComida() {
-        return comida;
+    public String getrefeicao() {
+        return refeicao;
     }
 
-    public void setComida(String comida) {
-        this.comida = comida;
+    public void setrefeicao(String refeicao) {
+        this.refeicao = refeicao;
     }
 
     public String getBebida() {
