@@ -1,4 +1,7 @@
-# algoritmo desenvolvido no dia:
+# algoritmo desenvolvido em:
+
+dom 27 set 2020 00:05:45 -03
+
    Setembro 2020      
 do se te qu qu se sá  
        1  2  3  4  5  
@@ -7,6 +10,4 @@ do se te qu qu se sá
 20 21 22 23 24 25 26  
 27 28 29 30  1  2  3
 
-# desenvolvido em :      
-                      
-dom 27 set 2020 00:05:45 -03
+
