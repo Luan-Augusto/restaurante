@@ -7,7 +7,7 @@ public class CupomFiscal {
     private Funcionario funcionario;
     private Random codigo;
 
-    public CupomFiscal(Cliente cliente, Funcionario funcionario, Random codigo) {
+    public CupomFiscal(Cliente cliente, Funcionario funcionario) {
         this.cliente = cliente;
         this.codigo = new Random();
     }
