@@ -17,12 +17,15 @@ public class Pedido {
         this.dataPedido = new Date();
     }
 
-    public int codigoPeido(Random codigo) {
+    // gerar um cod capaz de pegar 10 numeros aleatorios
+    public int codigoPedido(Random codigo) {
         int cod = 0;
+        // para i menor que 10 incremente i
         for (int i = 0; i < 10; i++) {
+            // armazenando a sequencia numerica na variavel cod
             cod = codigo.nextInt();
         }
-        return cod;
+        return cod;// retorno
     }
 
     public String getComida() {
