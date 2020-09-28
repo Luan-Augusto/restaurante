@@ -4,22 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente extends Pessoa {
-    private List<Cliente> clientes;
+	private List<Cliente> clientes;
 
-    public Cliente(String nome, String cpf) {
-        super(cpf, nome);
-        this.clientes = new ArrayList<>();
-    }
+	public Cliente(String nome, String cpf) {
+		super(cpf, nome);
+		this.clientes = new ArrayList<>();
+	}
 
-    public void cadastrarCliente(Cliente cliente) {
-        clientes.add(cliente);
-    }
+	/*
+	 * este construtor vai servir para clientes os quais:
+	 * 	 - nao saibam o numero do cpf decorado e estejam sem documento
+	 *	 - optem em nao informar
+	 */
+	public Cliente(String nome) {
+		super(nome);
+	}
 
-    public List<Cliente> getClientes() {
-        return clientes;
-    }
+	public void cadastrarCliente(Cliente cliente) {
+		clientes.add(cliente);
+	}
 
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
-    }
+	public List<Cliente> getClientes() {
+		return clientes;
+	}
+
+	public void setClientes(List<Cliente> clientes) {
+		this.clientes = clientes;
+	}
 }

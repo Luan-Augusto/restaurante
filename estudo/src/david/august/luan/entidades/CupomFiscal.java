@@ -14,10 +14,9 @@ public class CupomFiscal {
         this.cliente = cliente;
         this.codigo = new Random();
         this.dataCompra = Calendar.getInstance();
-
     }
 
-    // gerar um cod capaz de pegar 10 numeros aleatorios
+    // gera um cod capaz de pegar 10 numeros aleatorios
     public int codigoPedido(Random codigo) {
         int cod = 0;
         // para i menor que 10 incremente i

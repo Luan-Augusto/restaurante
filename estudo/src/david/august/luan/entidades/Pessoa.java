@@ -8,8 +8,13 @@ public class Pessoa {
         this.cpf = cpf;
         this.nome = nome;
     }
+    
+    public Pessoa(String nome) {
+		super();
+		this.nome = nome;
+	}
 
-    public String getCpf() {
+	public String getCpf() {
         return cpf;
     }
 
