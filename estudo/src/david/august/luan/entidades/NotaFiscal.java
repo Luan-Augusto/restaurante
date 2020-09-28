@@ -4,31 +4,21 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-public class CupomFiscal {
+public class NotaFiscal {
 	private Cliente cliente;
-	private List<Cliente> clientes;
 	private Funcionario funcionario;
-	private List<Funcionario> funcionarios;
 	private Pedido pedido;
 	private Random codigo;
 	private Calendar dataCompra;
 
-	public CupomFiscal(Pedido pedido, Cliente cliente, Funcionario funcionario) {
+	public NotaFiscal(Pedido pedido, Cliente cliente, Funcionario funcionario) {
 		this.pedido = pedido;
 		this.cliente = cliente;
 		this.codigo = new Random(codigoPedido(getCodigo()));
 		this.dataCompra = Calendar.getInstance();
 	}
 
-	public CupomFiscal() {
-	}
-
-	public void cadastrarCliente(Cliente cliente) {
-		clientes.add(cliente);
-	}
-
-	public void cadastrarFuncionario(Funcionario funcionario) {
-		funcionarios.add(funcionario);
+	public NotaFiscal() {
 	}
 
 	// gera um cod capaz de pegar 10 numeros aleatorios

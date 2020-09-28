@@ -12,9 +12,8 @@ public class Cliente extends Pessoa {
 	}
 
 	/*
-	 * este construtor vai servir para clientes os quais:
-	 * 	 - nao saibam o numero do cpf decorado e estejam sem documento
-	 *	 - optem em nao informar
+	 * este construtor vai servir para clientes os quais: - nao saibam o numero do
+	 * cpf decorado e estejam sem documento - optem em nao informar
 	 */
 	public Cliente(String nome) {
 		super(nome);
@@ -30,5 +29,10 @@ public class Cliente extends Pessoa {
 
 	public void setClientes(List<Cliente> clientes) {
 		this.clientes = clientes;
+	}
+
+	@Override
+	public String toString() {
+		return "\nNome: " + getNome() + "\nCPF: " + getCpf();
 	}
 }

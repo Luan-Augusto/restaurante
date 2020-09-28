@@ -17,25 +17,14 @@ public class Funcionario extends Pessoa {
 		nextRegistration++;
 	}
 
+
 	public void addFuncionario(Funcionario funcionario) {
 		funcionarios.add(funcionario);
-	}
-
-	public List<Funcionario> listarFuncionarios() {
-		return funcionarios;
 	}
 
 	// getter's/ setter's
 	public int getIdFuncionario() {
 		return idFuncionario;
-	}
-
-	public List<Funcionario> getFuncionarios() {
-		return funcionarios;
-	}
-
-	public void setFuncionarios(List<Funcionario> funcionarios) {
-		this.funcionarios = funcionarios;
 	}
 
 	public void setIdFuncionario(int idFuncionario) {
@@ -52,8 +41,7 @@ public class Funcionario extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Funcionario [idFuncionario=" + idFuncionario + ", funcionarios=" + funcionarios + ", salario=" + salario
-				+ "]";
+		return "\nidFuncionario: " + getIdFuncionario() + "\nCPF: " + getCpf() + " \nnome: " + getNome();
 	}
 
 }
