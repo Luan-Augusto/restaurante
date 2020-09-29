@@ -1,5 +1,6 @@
 package david.august.luan.entidades;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
@@ -7,6 +8,7 @@ import java.util.Random;
 public class NotaFiscal {
 	private Cliente cliente;
 	private Funcionario funcionario;
+	private List<Cliente> clientes;
 	private Pedido pedido;
 	private Random codigo;
 	private Calendar dataCompra;
@@ -14,6 +16,7 @@ public class NotaFiscal {
 	public NotaFiscal(Pedido pedido, Cliente cliente, Funcionario funcionario) {
 		this.pedido = pedido;
 		this.cliente = cliente;
+		this.clientes = new ArrayList<Cliente>();
 		this.codigo = new Random(codigoPedido(getCodigo()));
 		this.dataCompra = Calendar.getInstance();
 	}
@@ -33,8 +36,14 @@ public class NotaFiscal {
 	}
 
 	// GETTER'S / SETTER'S
-	public Cliente getCliente() {
-		return cliente;
+	public Cliente getCliente() throws ClienteNaoExisteException {
+		Cliente client = null;
+		for (Cliente c : clientes) {
+			if (clientes.contains(c)) {
+				client = c;
+			}
+		}
+		return client;
 	}
 
 	public Pedido getPedido() {
