@@ -3,6 +3,8 @@ package david.august.luan.entidades;
 import java.util.ArrayList;
 import java.util.List;
 
+import david.august.luan.exceptions.FuncionarioNaoExisteException;
+
 public class Funcionario extends Pessoa {
 	private static int nextRegistration = 0;
 
@@ -17,9 +19,15 @@ public class Funcionario extends Pessoa {
 		nextRegistration++;
 	}
 
-
-	public void addFuncionario(Funcionario funcionario) {
-		funcionarios.add(funcionario);
+	public void addFuncionario(Funcionario funcionario) throws FuncionarioNaoExisteException {
+		Funcionario fun = null;
+		for (Funcionario f : funcionarios) {
+			if (funcionarios.contains(f)) {
+				fun = f;
+			}
+			throw new FuncionarioNaoExisteException(f.getNome());
+		}
+		funcionarios.add(fun);
 	}
 
 	// getter's/ setter's

@@ -16,7 +16,7 @@ public class NotaFiscal {
 	public NotaFiscal(Pedido pedido, Cliente cliente, Funcionario funcionario) {
 		this.pedido = pedido;
 		this.cliente = cliente;
-		this.clientes = new ArrayList<Cliente>();
+		this.clientes = new ArrayList<>();
 		this.codigo = new Random(codigoPedido(getCodigo()));
 		this.dataCompra = Calendar.getInstance();
 	}
@@ -42,6 +42,7 @@ public class NotaFiscal {
 			if (clientes.contains(c)) {
 				client = c;
 			}
+			throw new ClienteNaoExisteException(c.getNome());
 		}
 		return client;
 	}
