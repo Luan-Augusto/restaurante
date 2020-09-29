@@ -16,6 +16,9 @@ public class Pedido {
 		this.dataPedido = new Date();
 	}
 
+	public Pedido() {
+	}
+
 	public String getrefeicao() {
 		return refeicao;
 	}

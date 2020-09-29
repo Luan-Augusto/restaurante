@@ -35,6 +35,11 @@ public class NotaFiscal {
 		return cod;// retorno
 	}
 
+	public NotaFiscal imprimirNota() {
+//		TODO - Implementar
+		return null;
+	}
+
 	// GETTER'S / SETTER'S
 	public Cliente getCliente() throws ClienteNaoExisteException {
 		Cliente client = null;
