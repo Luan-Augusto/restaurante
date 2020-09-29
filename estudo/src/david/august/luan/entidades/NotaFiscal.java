@@ -11,21 +11,20 @@ public class NotaFiscal {
 	private List<Cliente> clientes;
 	private Pedido pedido;
 	private Random codigo;
-	private Calendar dataCompra;
 
 	public NotaFiscal(Pedido pedido, Cliente cliente, Funcionario funcionario) {
 		this.pedido = pedido;
 		this.cliente = cliente;
+		this.funcionario = funcionario;
 		this.clientes = new ArrayList<>();
-		this.codigo = new Random(codigoPedido(getCodigo()));
-		this.dataCompra = Calendar.getInstance();
+		this.codigo = new Random();
 	}
 
 	public NotaFiscal() {
 	}
 
 	// gera um cod capaz de pegar 10 numeros aleatorios
-	public int codigoPedido(Random codigo) {
+	public int codigoPedido() {
 		int cod = 0;
 		// para i menor que 10 incremente i
 		for (int i = 0; i < 10; i++) {
@@ -80,14 +79,11 @@ public class NotaFiscal {
 		this.funcionario = funcionario;
 	}
 
-	public Calendar getDataCompra() {
-		return dataCompra;
-	}
-
 	@Override
 	public String toString() {
-		return "NotaFiscal\t Cliente:" + cliente + " funcionario: " + funcionario + " Pedido: " + pedido
-				+ " Codigo do pedido: " + codigo + " Data da compra: " + dataCompra;
+		return "\n---------------------------------------------------\nNotaFiscal \nCliente:" + cliente + "\n"
+				+ " \nFuncionario: " + funcionario + "\n" + " \nPedido: " + pedido + " \nCodigo do pedido: " + codigo
+				+ "\n---------------------------------------------------\n";
 	}
 
 }
