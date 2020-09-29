@@ -78,4 +78,11 @@ public class NotaFiscal {
 	public Calendar getDataCompra() {
 		return dataCompra;
 	}
+
+	@Override
+	public String toString() {
+		return "NotaFiscal\t Cliente:" + cliente + " funcionario: " + funcionario + " Pedido: " + pedido
+				+ " Codigo do pedido: " + codigo + " Data da compra: " + dataCompra;
+	}
+
 }
