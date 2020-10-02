@@ -49,7 +49,7 @@ public class Funcionario extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "\nidFuncionario: " + getIdFuncionario() + "\nCPF: " + getCpf() + " \nnome: " + getNome();
+		return "\nidFuncionario: " + getIdFuncionario() + " \nnome: " + getNome();
 	}
 
 }

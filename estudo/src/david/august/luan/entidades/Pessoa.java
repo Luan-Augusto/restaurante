@@ -4,17 +4,16 @@ public class Pessoa {
     private String cpf;
     private String nome;
 
-    public Pessoa(String cpf, String nome) {
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
         this.cpf = cpf;
+    }
+
+    public Pessoa(String nome) {
         this.nome = nome;
     }
-    
-    public Pessoa(String nome) {
-		super();
-		this.nome = nome;
-	}
 
-	public String getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
