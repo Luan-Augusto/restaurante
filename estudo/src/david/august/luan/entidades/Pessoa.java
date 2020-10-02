@@ -1,6 +1,6 @@
 package david.august.luan.entidades;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String cpf;
     private String nome;
 
