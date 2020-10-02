@@ -1,12 +1,12 @@
 package david.august.luan.entidades;
 
+import david.august.luan.interfaces.Codigo;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
-public class NotaFiscal {
+public class NotaFiscal implements Codigo {
     private Cliente cliente;
     private Funcionario funcionario;
     private List<Cliente> clientes;
@@ -25,7 +25,9 @@ public class NotaFiscal {
     }
 
     // gera um cod capaz de pegar 10 numeros aleatorios
-    public Object codigoPedido() {
+    @Override
+    public int codigoPedido() {
+        // algoritmo 1
 //		int cod = 0;
 //		// para i menor que 10 incremente i
 //		for (int i = 0; i < 10; i++) {
@@ -33,6 +35,8 @@ public class NotaFiscal {
 //			cod = codigo.nextInt();
 //		}
 //		return cod;// retorno
+
+        // algoritmo 2
 //        Random cod = new Random();
 //        AtomicInteger valor = new AtomicInteger();
 //        Arrays.stream(cod)
@@ -44,11 +48,6 @@ public class NotaFiscal {
         Random r = new Random();
         int numero = r.nextInt(5);
         return numero;
-    }
-
-    public NotaFiscal imprimirNota() {
-//		TODO - Implementar
-        return null;
     }
 
     // GETTER'S / SETTER'S
