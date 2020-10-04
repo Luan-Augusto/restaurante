@@ -45,9 +45,10 @@ public class NotaFiscal implements Codigo {
 //                .map(numero -> numero)
 //                .forEach(numero -> valor.set(numero));
 //        return valor.get();
+
+        // algoritmo 3
         Random r = new Random();
-        int numero = r.nextInt(5);
-        return numero;
+        return r.nextInt(10000000);
     }
 
     // GETTER'S / SETTER'S
@@ -93,7 +94,7 @@ public class NotaFiscal implements Codigo {
     @Override
     public String toString() {
         return "\n---------------------------------------------------\nNotaFiscal \nCliente:" + cliente + "\n"
-                + " \nFuncionario: " + funcionario + "\n" + " \nPedido: " + pedido + " \nCodigo do pedido: " + codigo
+                + " \nFuncionario: " + funcionario + "\n" + " \nPedido: " + pedido + " \nCodigo do pedido: " + codigoPedido()
                 + "\n---------------------------------------------------\n";
     }
 

@@ -1,5 +1,6 @@
 package david.august.luan.entidades;
 
+// essa classe nao podera ser instanciada pois e abstrata
 public abstract class Pessoa {
     private String cpf;
     private String nome;
